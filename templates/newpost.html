@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Post</title>
+    <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<h1>New Post</h1>
+<form method="post" class="well" action="/blog/newpost">
+    <div class="row-fluid">
+        <label for="title" class="span1">
+        Title</label>
+        <input id="title" name="subject" type="text" class="span1" value="{{title}}">
+        {{title_error}}
+    </div>
+    <div class="row-fluid ">
+        <label class="span1" for="content">
+        Content</label>
+        <textarea id="content"  name="content" class="span4">{{content}}</textarea>
+        {{content_error}}
+    </div>
+    <div class="form-actions">
+    <input type="submit" class="btn btn-primary">
+    </div>
+</form>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="/resources/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>
